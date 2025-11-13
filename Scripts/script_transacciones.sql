@@ -28,4 +28,6 @@ insert into transacciones(codigo,numero_cuenta,monto,tipo,fecha,hora)
 values(009,'11652',2500.00,'C','25/12/2024','11:00')
 insert into transacciones(codigo,numero_cuenta,monto,tipo,fecha,hora)
 values(010,'43210',1500.00,'D','29/08/2025','07:00')
+insert into transacciones(codigo,numero_cuenta,monto,tipo,fecha,hora)
+values(011,'43610',100.00,'D','29/08/2025','07:00')
 select * from transacciones
