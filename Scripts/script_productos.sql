@@ -24,5 +24,14 @@ insert into productos(codigo,nombre,precio,stock)
 values(7,'Resident Evil 4',14.58,350)
 insert into productos(codigo,nombre,precio,stock)
 values(8,'Play Station 5',350.00,300)
+insert into productos(codigo,nombre,precio,stock)
+values(9,'Quinoa',1.50,500)
+insert into productos(codigo,nombre,precio,stock)
+values(10,'Queso',2.75,50)
+insert into productos(codigo,nombre,precio,stock)
+values(11,'Quita-Esmalte',1.00,12)
+insert into productos(codigo,nombre,precio,stock)
+values(12,'Quesadilla',0.55,50)
+
 
 select * from productos
