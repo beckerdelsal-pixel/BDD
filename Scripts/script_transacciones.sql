@@ -1,4 +1,5 @@
 --crear tabla transacciones
+drop table transacciones
 create table transacciones(
 	codigo int not null,
 	numero_cuenta char(5) not null,
@@ -8,26 +9,36 @@ create table transacciones(
 	hora time not null,
 	constraint codigoTransacciones_pk primary key(codigo)
 )
-insert into transacciones(codigo,numero_cuenta,monto,tipo,fecha,hora)
-values(001,'01234',500.00,'D','03/06/2024','07:00')
-insert into transacciones(codigo,numero_cuenta,monto,tipo,fecha,hora)
-values(002,'56789',800.00,'C','04/06/2024','07:00')
-insert into transacciones(codigo,numero_cuenta,monto,tipo,fecha,hora)
-values(003,'98765',200.00,'D','04/06/2024','10:00')
-insert into transacciones(codigo,numero_cuenta,monto,tipo,fecha,hora)
-values(004,'59982',1500.00,'C','04/06/2024','17:00')
-insert into transacciones(codigo,numero_cuenta,monto,tipo,fecha,hora)
-values(005,'12237',1500.00,'D','10/06/2024','07:00')
-insert into transacciones(codigo,numero_cuenta,monto,tipo,fecha,hora)
-values(006,'00875',1502.00,'D','25/06/2024','08:30')
-insert into transacciones(codigo,numero_cuenta,monto,tipo,fecha,hora)
-values(007,'22486',1700.00,'C','09/10/2024','15:00')
-insert into transacciones(codigo,numero_cuenta,monto,tipo,fecha,hora)
-values(008,'26697',1500.00,'C','10/11/2024','07:00')
-insert into transacciones(codigo,numero_cuenta,monto,tipo,fecha,hora)
-values(009,'11652',2500.00,'C','25/12/2024','11:00')
-insert into transacciones(codigo,numero_cuenta,monto,tipo,fecha,hora)
-values(010,'43210',1500.00,'D','29/08/2025','07:00')
-insert into transacciones(codigo,numero_cuenta,monto,tipo,fecha,hora)
-values(011,'43610',100.00,'D','29/08/2025','07:00')
+
+insert into transacciones(codigo, numero_cuenta, monto, tipo, fecha, hora)
+values(78945, '75369', 200, 'C', '20/09/2023', '23:30');
+
+insert into transacciones(codigo, numero_cuenta, monto, tipo, fecha, hora)
+values(53147, '32102', 500.65, 'D', '15/06/2022', '17:55');
+
+insert into transacciones(codigo, numero_cuenta, monto, tipo, fecha, hora)
+values(32548, '21001', 1600, 'C', '17/05/2021', '16:37');
+
+insert into transacciones(codigo, numero_cuenta, monto, tipo, fecha, hora)
+values(32165, '51437', 1050, 'D', '25/04/2020', '15:48');
+
+insert into transacciones(codigo, numero_cuenta, monto, tipo, fecha, hora)
+values(78542, '02147', 300, 'D', '20/03/2019', '22:19');
+
+insert into transacciones(codigo, numero_cuenta, fecha, monto, tipo, hora)
+values(23210, '32015', '29/06/2025', 400, 'C', '13:55');
+
+insert into transacciones(codigo, numero_cuenta, monto, tipo, fecha, hora)
+values(35412, '85214', 600, 'D', '07/12/2015', '20:14');
+
+insert into transacciones(codigo, numero_cuenta, monto, tipo, fecha, hora)
+values(54193, '96325', 800, 'D', '06/11/2012', '11:00');
+
+insert into transacciones(codigo, numero_cuenta, monto, tipo, fecha, hora)
+values(95124, '74125', 900, 'D', '23/10/2002', '9:00');
+
+insert into transacciones(codigo, numero_cuenta, monto, tipo, fecha, hora)
+values(54143, '85213', 2000, 'C', '11/09/1999', '7:30');
+
+
 select * from transacciones

@@ -8,20 +8,27 @@ create table estudiantes(
 	fecha_nacimiento date not null,
 	constraint estudiantes_pk primary key(cedula)
 )
-insert into estudiantes(cedula,nombre,apellido,email,fecha_nacimiento)
-values('1798544636','Juanito','Alimaña','juanitoalim@hotmail.com','10/05/2002')
-insert into estudiantes(cedula,nombre,apellido,email,fecha_nacimiento)
-values('1734556453','Pedro','Alchundia','pedroalchundia79@gmail.com','14/10/1979')
-insert into estudiantes(cedula,nombre,apellido,email,fecha_nacimiento)
-values('0941088304','Becker','Del Salto','beckerdelsalto@gmail.com','29/06/2005')
-insert into estudiantes(cedula,nombre,apellido,email,fecha_nacimiento)
-values('0927586990','Carla','Gallardo','carlagallardoz101105@gmail.com','10/11/2005')
-insert into estudiantes(cedula,nombre,apellido,email,fecha_nacimiento)
-values('0984662390','Domenica','Leon','dominicaleon11@gmail.com','13/07/2011')
-insert into estudiantes(cedula,nombre,apellido,email,fecha_nacimiento)
-values('0922144266','Leidy','Leon','rosseleon18@hotmail.com','18/09/1979')
-insert into estudiantes(cedula,nombre,apellido,email,fecha_nacimiento)
-values('0887996547','Alan','Brito','alanbritodelgado24@yahoo.com','24/09/1999')
-insert into estudiantes(cedula,nombre,apellido,email,fecha_nacimiento)
-values('1778663218','Susana','Oria','susanaoriablanca@outlook.com','24/12/2015')
+
+insert into estudiantes (cedula,nombre,apellido,email,fecha_nacimiento)
+values ('1235326801','Raul','Martínez','raumart01@gmail.com','04/02/2003');
+insert into estudiantes (cedula,nombre,apellido,email,fecha_nacimiento)
+values ('1835476802','Mario','Guaman','MarioG25@gmail.com', '08/12/2000');
+insert into estudiantes (cedula,nombre,apellido,email,fecha_nacimiento)
+values ('1235476803','Roberto','Quishpe','RobQuishpe64@gmail.com','29/06/2005');
+insert into estudiantes (cedula,nombre,apellido,email,fecha_nacimiento)
+values ('1735476804','Paul','Noguera','PaulNog55@gmail.com','22/07/2002');
+insert into estudiantes (cedula,nombre,apellido,email,fecha_nacimiento)
+values ('1232476805','Marcelo','Ramos','MarceloR72@gmail.com','15/08/2008');
+insert into estudiantes (cedula,nombre,apellido,email,fecha_nacimiento)
+values ('1735476806','Anthony','Agual','KAgual22@gmail.com','25/03/2002');
+insert into estudiantes (cedula,nombre,apellido,email,fecha_nacimiento)
+values ('1235476807','Paula','Celi','PauCeli31@gmail.com','30/09/2010' );
+insert into estudiantes (cedula,nombre,apellido,email,fecha_nacimiento)
+values ('1735476808','Mónica','Martínez','MoniMar15@gmail.com','22/01/2001');
+insert into estudiantes (cedula,nombre,apellido,email,fecha_nacimiento)
+values ('1235476809','Anabel','Perlaza','WPerlaza18@gmail.com','12/04/2000');
+insert into estudiantes (cedula,nombre,apellido,email,fecha_nacimiento)
+values ('1735476810','Sofía','Jimenez','SofiJz22@gmail.com','22/01/2001');
+
+
 select * from estudiantes

@@ -1,4 +1,5 @@
 -- crear tabla registros entrada
+drop table registros_entrada
 create table registros_entrada(
 	codigo_registro int not null,
 	cedula_empleado char(10) not null,
@@ -6,24 +7,36 @@ create table registros_entrada(
 	hora time not null,
 	constraint codigo_registro_pk primary key(codigo_registro)
 )
-insert into registros_entrada(codigo_registro,cedula_empleado,fecha,hora)
-values(001,'0998544636','03/06/2024','07:00')
-insert into registros_entrada(codigo_registro,cedula_empleado,fecha,hora)
-values(002,'1234556453','03/06/2024','07:00')
-insert into registros_entrada(codigo_registro,cedula_empleado,fecha,hora)
-values(003,'0941088304','03/06/2024','07:00')
-insert into registros_entrada(codigo_registro,cedula_empleado,fecha,hora)
-values(004,'0927586990','03/06/2024','07:00')
-insert into registros_entrada(codigo_registro,cedula_empleado,fecha,hora)
-values(005,'0984662390','03/06/2024','07:00')
-insert into registros_entrada(codigo_registro,cedula_empleado,fecha,hora)
-values(006,'0922144266','04/06/2024','10:00')
-insert into registros_entrada(codigo_registro,cedula_empleado,fecha,hora)
-values(007,'0887996547','04/06/2024','10:00')
-insert into registros_entrada(codigo_registro,cedula_empleado,fecha,hora)
-values(008,'0978663218','04/06/2024','10:00')
-insert into registros_entrada(codigo_registro,cedula_empleado,fecha,hora)
-values(009,'1785223569','04/06/2024','10:00')
-insert into registros_entrada(codigo_registro,cedula_empleado,fecha,hora)
-values(010,'1744591234','04/06/2024','10:00')
+
+insert into registros_entrada(codigo_registro, cedula_empleado, fecha, hora)
+values(12345, '1754416489', '18/06/2023', '7:00');
+
+insert into registros_entrada(codigo_registro, cedula_empleado, fecha, hora)
+values(12355, '1758254591', '03/08/2023', '14:00');
+
+insert into registros_entrada(codigo_registro, cedula_empleado, fecha, hora)
+values(12346, '1715974492', '25/03/2022', '23:00');
+
+insert into registros_entrada(codigo_registro, cedula_empleado, fecha, hora)
+values(12347, '1735642583', '28/12/2015', '16:00');
+
+insert into registros_entrada(codigo_registro, cedula_empleado, fecha, hora)
+values(12389, '1707416984', '16/07/2012', '8:00');
+
+insert into registros_entrada(codigo_registro, cedula_empleado, fecha, hora)
+values(12349, '1778541235', '17/03/2013', '10:00');
+
+insert into registros_entrada(codigo_registro, cedula_empleado, fecha, hora)
+values(12310, '1742158637', '14/05/2017', '19:00');
+
+insert into registros_entrada(codigo_registro, cedula_empleado, fecha, hora)
+values(12311, '1756321784', '15/05/2004', '20:00');
+
+insert into registros_entrada(codigo_registro, cedula_empleado, fecha, hora)
+values(12358, '1712546328', '07/07/2008', '21:00');
+
+insert into registros_entrada(codigo_registro, cedula_empleado, fecha, hora)
+values(12378, '1725785413', '02/09/2023', '4:00');
+
+
 select * from registros_entrada
