@@ -9,23 +9,23 @@ public class TestAuto {
 				Auto auto2 = new Auto();
 				
 				//modificar los valores de los atributos de cada auto
-				auto1.marca = "HYUNDAI";
-				auto1.anio = 2000;
-				auto1.precio = 1555;
+				auto1.setMarca("HYUNDAI");
+				auto1.setAnio(2000);
+				auto1.setPrecio(1500);
 				
-				auto2.marca = "PAGANI";
-				auto2.anio = 1995;
-				auto2.precio = 2590;
+				auto2.setMarca("PAGANI");
+				auto2.setAnio(1995);
+				auto2.setPrecio(2500);
 				
 				//mostrar los valores de los atributos de los autos en consola
 				System.out.println("**********AUTO 1**********");
-				System.out.println("Marca: " + auto1.marca);
-				System.out.println("Anio: "+ auto1.anio);
-				System.out.println("Precio: "+ auto1.precio);
+				System.out.println("Marca: " + auto1.getMarca());
+				System.out.println("Anio: "+ auto1.getAnio());
+				System.out.println("Precio: "+ auto1.getPrecio());
 				System.out.println("**********AUTO 2**********");
-				System.out.println("Marca: " + auto2.marca);
-				System.out.println("Anio: " + auto2.anio);
-				System.out.println("Precio: " + auto2.precio);
+				System.out.println("Marca: " + auto2.getMarca());
+				System.out.println("Anio: " + auto2.getAnio());
+				System.out.println("Precio: " + auto2.getPrecio());
 	}
 
 }

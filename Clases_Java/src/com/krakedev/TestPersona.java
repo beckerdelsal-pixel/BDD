@@ -10,28 +10,28 @@ public class TestPersona {
 		//declaracion de valores en las variables
 		//modificar los atributos
 		
-		p.nombre="Mario";
-		p.edadPersona=45;
-		p.estatura=1.85;
+		p.setNombre("Mario");
+		p.setEdadPersona(45);
+		p.setEstatura(1.85);
 		
-		p2.nombre="Angelina";
-		p2.edadPersona=25;
-		p2.estatura=1.70;
-		
-		
-		System.out.println("HOLA MUNDO");
-		System.out.println("Nombre: " + p.nombre);
-		System.out.println("Edad: " + p.edadPersona);
-		System.out.println("Estatura: " + p.estatura);
-		
-		
-		
+		p2.setNombre("Angelina");
+		p2.setEdadPersona(25);
+		p2.setEstatura(1.70);
 		
 		
 		System.out.println("HOLA MUNDO");
-		System.out.println("Nombre: " + p2.nombre);
-		System.out.println("Edad: " + p2.edadPersona);
-		System.out.println("Estatura: " + p2.estatura);
+		System.out.println("Nombre: " + p.getNombre());
+		System.out.println("Edad: " + p.getEdadPersona());
+		System.out.println("Estatura: " + p.getEstatura());
+		
+		
+		
+		
+		
+		System.out.println("HOLA MUNDO");
+		System.out.println("Nombre: " + p2.getNombre());
+		System.out.println("Edad: " + p2.getEdadPersona());
+		System.out.println("Estatura: " + p2.getEstatura());
 		
 	}
 
