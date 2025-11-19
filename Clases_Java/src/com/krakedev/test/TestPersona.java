@@ -1,4 +1,6 @@
-package com.krakedev;
+package com.krakedev.test;
+
+import com.krakedev.Persona;
 
 public class TestPersona {
 
@@ -8,7 +10,7 @@ public class TestPersona {
 		Persona p2 = new Persona();
 		p = new Persona(); //se esta instanciando un objeto persona y referenciandolo con p
 		
-		Persona p3 = new Persona("Pablo");
+	//	Persona p3 = new Persona("Pablo");
 		Persona p4 = new Persona("Rocio",43,1.60);
 		
 		System.out.println("Nombre: " + p4.getNombre());
