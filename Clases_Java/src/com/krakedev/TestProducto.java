@@ -9,11 +9,11 @@ public class TestProducto {
 		Producto productoB;
 		Producto productoC;
 		// instanciar 3 objetos de producto y referenciarlo con las variables anteriores
-		productoA = new Producto();
-		productoB = new Producto();
-		productoC = new Producto();
+		productoA = new Producto("Ciprofloxacina","Medicamento para las infecciones y parasitos", 5.50, 50);
+		productoB = new Producto("Paracetamol","Medicamento para el malestar",11.60,50);
+		productoC = new Producto("Omeprazol","Medicamento para acidez estomacal",6.50,50);
 		// modificar los atributos de cada producto
-		productoA.setNombre("Ciprofloxacina");
+		/*productoA.setNombre("Ciprofloxacina");
 		productoA.setDescripcion("Medicamento para las infecciones y parasitos");
 		productoA.setPrecio(5.50);
 		productoA.setStockActual(50);
@@ -24,7 +24,7 @@ public class TestProducto {
 		productoC.setNombre("Omeprazol");
 		productoC.setDescripcion("Medicamento para acidez estomacal");
 		productoC.setPrecio(6.50);
-		productoC.setStockActual(50);
+		productoC.setStockActual(50);*/
 		// mostrar en pantalla los valores de los productos
 		System.out.println("**********Producto 1**********");
 		System.out.println("Nombre: " + productoA.getNombre());

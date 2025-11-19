@@ -7,6 +7,13 @@ public class TestPersona {
 		Persona p;//1. declarar una variable de tipo persona
 		Persona p2 = new Persona();
 		p = new Persona(); //se esta instanciando un objeto persona y referenciandolo con p
+		
+		Persona p3 = new Persona("Pablo");
+		Persona p4 = new Persona("Rocio",43,1.60);
+		
+		System.out.println("Nombre: " + p4.getNombre());
+		System.out.println("Edad: " + p4.getEdadPersona());
+		System.out.println("Estatura: " + p4.getEstatura());
 		//declaracion de valores en las variables
 		//modificar los atributos
 		
