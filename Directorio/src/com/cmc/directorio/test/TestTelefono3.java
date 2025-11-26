@@ -3,26 +3,19 @@ package com.cmc.directorio.test;
 import com.cmc.directorio.entidades.AdminTelefono;
 import com.cmc.directorio.entidades.Telefono;
 
-public class TestTelefono2 {
+public class TestTelefono3 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Telefono telf = new Telefono("movi","0982342343",20);
+		Telefono telf2 = new Telefono("movi","0927586990",30);
+		Telefono telf3 = new Telefono("claro","0984662390",40);
+		Telefono telf4 = new Telefono("movi","0922144266",50);
 		AdminTelefono at = new AdminTelefono();
 		
-		at.activarMensajeria(telf);
-		
 		System.out.println("*************************");
-		System.out.println("Operadora: " + telf.getOperadora());
-		System.out.println("Numero: " + telf.getNumero());
-		System.out.println("Codigo: " + telf.getCodigo());
-		System.out.println("Tiene Whatsapp:" + telf.isTieneWhatsapp());
+		int totalMovi = at.contarMovi(telf4, telf2, telf3);
+		System.out.println("Operadoras movi: " + totalMovi);
 		System.out.println("*************************");
-		
-		
-		
-		
-
 	}
 
 }
