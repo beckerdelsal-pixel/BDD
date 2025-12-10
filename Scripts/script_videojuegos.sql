@@ -8,34 +8,16 @@ create table videojuegos(
 	constraint codigo_pk primary key(codigo)
 )
 insert into videojuegos(codigo, nombre, descripcion, valoracion)
-values(07563, 'Call of Duty', 'juego de terror', 9);
+values(1, 'God of war', 'Aventura épica de un padre y su hijo en una misión de venganza.', 98), 
+(2, 'Call of Duty', 'Juego de disparos ambientado en una intensa Guerra moderna.', 90), 
+(3, 'Cyberpunk 2077', 'Mundo abierto futurista con elementos de rol y acción.', 85), 
+(4, 'Dark Souls III', 'Juego de rol de acción con alta dificultad y un mundo de fantasía oscura.', 92), 
+(5, 'Doom Eternal', 'Acción frenética contra hordas demoníacas. Una verdadera Guerra de un solo hombre.', 95), 
+(6, 'Control', 'Aventura de acción sobrenatural con poderes telequinéticos.', 88), 
+(7, 'Days Gone', 'Survival horror en un mundo post-apocalíptico lleno de freakers.', 80), 
+(8, 'The Last of Us', 'Supervivencia emocional en un mundo devastado por una infeccion y una Guerra por recursos.', 97), 
+(9, 'Dragon Age: Inquisition', 'Épico juego de rol y fantasía con toma de decisiones cruciales.', 89),
+(10, 'Crash Bandicoot 4', 'Plataformas clásico con desafíos modernos y nuevas mecánicas.', 87); 
 
-insert into videojuegos(codigo, nombre, descripcion, valoracion)
-values(85421, 'Free Fire', 'juego de accion', 7);
-
-insert into videojuegos(codigo, nombre, descripcion, valoracion)
-values(93475, 'Call of Clans', 'juego de terror', 10);
-
-insert into videojuegos(codigo, nombre, descripcion, valoracion)
-values(15983, 'Fornite', 'juego de suspenso', 10);
-
-insert into videojuegos(codigo, nombre, valoracion)
-values(35784, 'Minecraft', 3);
-
-insert into videojuegos(codigo, nombre, descripcion, valoracion)
-values(54682, 'Tom and Jerry', 'juego de comedia', 8);
-
-insert into videojuegos(codigo, nombre, descripcion, valoracion)
-values(01456, 'Ajedres', 'juego de psicoligia', 6);
-
-insert into videojuegos(codigo, nombre, descripcion, valoracion)
-values(70215, 'God of Ward', 'juego de aprendisaje', 7);
-
-insert into videojuegos(codigo, nombre, descripcion, valoracion)
-values(63240, 'Crash', 'juego de deprote', 9);
-
-insert into videojuegos(codigo, nombre, descripcion, valoracion)
-values(63549, 'Dragon Ball', 'juego de baile', 8);
-
-
+delete from videojuegos
 select * from videojuegos
