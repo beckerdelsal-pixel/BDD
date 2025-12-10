@@ -7,36 +7,17 @@ create table registros_entrada(
 	hora time not null,
 	constraint codigo_registro_pk primary key(codigo_registro)
 )
-
-insert into registros_entrada(codigo_registro, cedula_empleado, fecha, hora)
-values(12345, '1754416489', '18/06/2023', '7:00');
-
-insert into registros_entrada(codigo_registro, cedula_empleado, fecha, hora)
-values(12355, '1758254591', '03/08/2023', '14:00');
-
-insert into registros_entrada(codigo_registro, cedula_empleado, fecha, hora)
-values(12346, '1715974492', '25/03/2022', '23:00');
-
-insert into registros_entrada(codigo_registro, cedula_empleado, fecha, hora)
-values(12347, '1735642583', '28/12/2015', '16:00');
-
-insert into registros_entrada(codigo_registro, cedula_empleado, fecha, hora)
-values(12389, '1707416984', '16/07/2012', '8:00');
-
-insert into registros_entrada(codigo_registro, cedula_empleado, fecha, hora)
-values(12349, '1778541235', '17/03/2013', '10:00');
-
-insert into registros_entrada(codigo_registro, cedula_empleado, fecha, hora)
-values(12310, '1742158637', '14/05/2017', '19:00');
-
-insert into registros_entrada(codigo_registro, cedula_empleado, fecha, hora)
-values(12311, '1756321784', '15/05/2004', '20:00');
-
-insert into registros_entrada(codigo_registro, cedula_empleado, fecha, hora)
-values(12358, '1712546328', '07/07/2008', '21:00');
-
-insert into registros_entrada(codigo_registro, cedula_empleado, fecha, hora)
-values(12378, '1725785413', '02/09/2023', '4:00');
-
+drop table registros_entrada
+insert into registros_entrada(codigo_registro, cedula_empleado, fecha, hora, codigo_empleado)
+values(1, '0987654321', '2023-08-15', '08:00:00', 2201),
+(2, '0987654321', '2023-09-01', '09:30:00', 2201), 
+(3, '0123456789', '2023-10-20', '10:45:00', 1001), 
+(4, '0234567890', '2023-11-05', '11:15:00', 3003), 
+(5, '0987654321', '2023-12-10', '12:00:00', 2201), 
+(6, '0123456789', '2023-08-25', '12:59:00', 1001), 
+(7, '0234567890', '2023-09-15', '08:30:00', 3003), 
+(8, '0987654321', '2023-10-01', '09:05:00', 2201), 
+(9, '0123456789', '2023-11-28', '11:00:00', 1001), 
+(10, '0234567890', '2023-12-31', '10:15:00', 3003); 
 
 select * from registros_entrada
