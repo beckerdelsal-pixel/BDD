@@ -5,7 +5,7 @@ create table clientes(
 
 	constraint clientes_pk primary key (cedula)
 )
-
+drop from clientes
 insert into clientes (cedula, nombre, apellido)
 values ('1701234567', 'Monica', 'Velez'), 
 ('0712345678', 'Andres', 'Guerra'), 

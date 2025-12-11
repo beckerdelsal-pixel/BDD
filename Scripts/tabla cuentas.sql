@@ -14,7 +14,7 @@ foreign key (cedula_propietario)
 references usuario(cedula)
 
 select * from cuentas
-insert into cuentas(numero_cuenta, cedula_propietario, fecha, saldo)
+insert into cuentas(numero_cuenta, cedula_propietario, fecha_creacion, saldo)
 values ('C0001', '12345', '2022-10-15', 550.00),
 ('C0002', '67890', '2023-01-20', 125.50),
 ('C0003', '11111', '2022-12-01', 999.99),

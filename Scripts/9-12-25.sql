@@ -11,6 +11,4 @@ create table estado_civil (
 	constraint estado_civil_pk primary key (codigo)
 )
 
-foreign key (estado_civil)){
-
-}
+foreign key (estado_civil))

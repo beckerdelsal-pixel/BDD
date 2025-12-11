@@ -1,3 +1,5 @@
+
+
 create table compras(
 	id_compra int ,
 	cedula char(10) not null,
