@@ -19,5 +19,5 @@ values(1, 'God of war', 'Aventura épica de un padre y su hijo en una misión de
 (9, 'Dragon Age: Inquisition', 'Épico juego de rol y fantasía con toma de decisiones cruciales.', 89),
 (10, 'Crash Bandicoot 4', 'Plataformas clásico con desafíos modernos y nuevas mecánicas.', 87); 
 
-delete from videojuegos
+delete from videojuegos where codigo = 11;
 select * from videojuegos

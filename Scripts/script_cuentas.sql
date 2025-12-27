@@ -29,5 +29,6 @@ values ('25577','17512','15/08/2025',3500);
 insert into cuentas (numero_cuenta,cedula_propietario,fecha_creacion,saldo)
 values ('25578','17503','15/06/2017',4500);
 
+delete from cuentas where numero_cuenta = '22143'
 
 select * from cuentas
