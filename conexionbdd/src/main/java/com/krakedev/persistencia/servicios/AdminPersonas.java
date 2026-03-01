@@ -2,8 +2,10 @@ package com.krakedev.persistencia.servicios;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Time;
+import java.util.ArrayList;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -132,4 +134,44 @@ public class AdminPersonas {
 			}
 		}
 	}
+	
+	public static ArrayList<Persona> buscarPorNombre(String nombreBusqueda) throws Exception{
+		ArrayList<Persona> personas = new ArrayList<Persona>();
+		Connection con = null;
+		PreparedStatement ps=null;
+		ResultSet rs = null;
+		try {
+			con=ConexionBDD.conectar();
+			ps = con.prepareStatement("select * from personas where nombre like ?");
+			ps.setString(1,"%"+nombreBusqueda+"%");
+			
+			rs = ps.executeQuery();
+			
+			while(rs.next()) {
+				String nombre = rs.getString("nombre");
+				String cedula = rs.getString("cedula");
+				Persona p = new Persona();
+				p.setNombre(nombre);
+				p.setCedula(cedula);
+				personas.add(p);
+			}
+		} catch (Exception e) {
+			LOGGER.error("Error al consultar por nombre...",e);
+			throw new Exception ("Error al consultar por nombre...");
+		} finally {
+			//cerrar conexion
+			try {
+				con.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				LOGGER.error("Error con la base de datos...",e);
+				e.printStackTrace();
+				throw new Exception("Error con la base de datos...");
+				
+			}
+		}
+		
+		return personas;
+	}
+	
 }

@@ -17,7 +17,9 @@ values(1, 'God of war', 'Aventura épica de un padre y su hijo en una misión de
 (7, 'Days Gone', 'Survival horror en un mundo post-apocalíptico lleno de freakers.', 80), 
 (8, 'The Last of Us', 'Supervivencia emocional en un mundo devastado por una infeccion y una Guerra por recursos.', 97), 
 (9, 'Dragon Age: Inquisition', 'Épico juego de rol y fantasía con toma de decisiones cruciales.', 89),
-(10, 'Crash Bandicoot 4', 'Plataformas clásico con desafíos modernos y nuevas mecánicas.', 87); 
+(10, 'Crash Bandicoot 4', 'Plataformas clásico con desafíos modernos y nuevas mecánicas.', 87),
+(11, 'Batman', 'Épico juego de accion y aventuras peleando contra malandros.', 90),
+(12, 'Sonic', 'Juego de aventura sobre un erizo veloz.', 90);
 
 delete from videojuegos where codigo = 11;
 select * from videojuegos

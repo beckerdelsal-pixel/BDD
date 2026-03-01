@@ -1,12 +1,17 @@
 package com.krakedev.persistencia.servicios;
 
+import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.krakedev.persistencia.entidades.Cuentas;
+import com.krakedev.persistencia.entidades.Persona;
 import com.krakedev.persistencia.entidades.Videojuego;
 import com.krakedev.persistencia.utils.ConexionBDD;
 
@@ -90,9 +95,6 @@ public static void insertar (Videojuego videojuego) throws Exception{
 	}
 	
 	
-	
-	
-	
 	public static void eliminar(int codigo) throws Exception {
 	    Connection conect = null;
 	    PreparedStatement ps = null;
@@ -123,4 +125,98 @@ public static void insertar (Videojuego videojuego) throws Exception{
 			}
 		}
 	}
+	
+	//varios registros
+	
+	public static ArrayList<Videojuego> buscarPorValoracion(Integer valoracion) throws Exception{
+		ArrayList<Videojuego> juego = new ArrayList<Videojuego>();
+		Connection con = null;
+		PreparedStatement ps=null;
+		ResultSet rs = null;
+		try {
+			con=ConexionBDD.conectar();
+			ps = con.prepareStatement("select * from videojuegos where valoracion = ?");
+			ps.setInt(1,valoracion);
+			
+			rs = ps.executeQuery();
+			
+			while(rs.next()) {
+				Integer codigo = rs.getInt("codigo");
+				String nombre = rs.getString("nombre");
+				String descripcion = rs.getString("descripcion");
+				Integer valor = rs.getInt("valoracion");
+				Videojuego v = new Videojuego();
+				v.setCodigo(codigo);
+				v.setNombre(nombre);
+				v.setDescripcion(descripcion);
+				v.setValoracion(valor);
+				juego.add(v);
+			}
+		} catch (Exception e) {
+			LOGGER.error("Error al consultar por valoracion...",e);
+			throw new Exception ("Error al consultar por valoracion...");
+		} finally {
+			//cerrar conexion
+			try {
+				con.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				LOGGER.error("Error con la base de datos...",e);
+				e.printStackTrace();
+				throw new Exception("Error con la base de datos...");
+				
+			}
+		}
+		
+		return juego;
+	}
+	
+	//solo un registro
+	
+	public static Videojuego buscarPorCodigo(Integer codigo) throws Exception {
+		Videojuego juego = new Videojuego();
+		Connection con = null;
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+		try {
+			con = ConexionBDD.conectar();
+			ps = con.prepareStatement("select * from videojuegos where codigo = ?");
+			ps.setInt(1, codigo);
+
+			rs = ps.executeQuery();
+			
+			if(rs.next()) {
+				Integer cod = rs.getInt("codigo");
+				String nombre = rs.getString("nombre");
+				String descripcion = rs.getString("descripcion");
+				Integer valor = rs.getInt("valoracion");
+				juego.setCodigo(cod);
+				juego.setNombre(nombre);
+				juego.setDescripcion(descripcion);
+				juego.setValoracion(valor);
+
+			}
+			
+			
+		} catch (Exception e) {
+			LOGGER.error("Error al consultar por codigo...", e);
+			e.printStackTrace();
+			throw new Exception("Error al consultar por codigo...");
+		} finally {
+			// cerrar conexion
+			try {
+				con.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				LOGGER.error("Error con la base de datos...", e);
+				e.printStackTrace();
+				throw new Exception("Error con la base de datos...");
+
+			}
+		}
+
+		return juego;
+	}
+	
+	
 }
